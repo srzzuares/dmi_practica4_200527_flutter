@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '-----------',
+      color: const Color.fromARGB(255, 26, 211, 103),
       theme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 79, 231, 142)),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 79, 231, 142)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: '200527 - CsSuar'),
@@ -42,12 +43,63 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   } */
+  void _alert() {
+    setState(() {
+      AlertDialog alertDialog = AlertDialog(
+        backgroundColor: const Color.fromRGBO(95, 224, 97, 0.914),
+        title: const Text("No me toquessss!!!!"),
+        titleTextStyle: const TextStyle(
+            fontFamily: 'BlwBoldItalic',
+            fontSize: 36,
+            color: Color.fromARGB(255, 12, 109, 229)),
+        content: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Que me corrooo",
+              style: TextStyle(
+                fontFamily: 'blwItalic',
+                fontSize: 44,
+                color: Color.fromARGB(255, 12, 109, 229),
+              ),
+            ),
+            /* Image.asset(
+              "assets/images/yame2.jpeg",
+              width: 200,
+              height: 200,
+              alignment: Alignment.center,
+              fit: BoxFit.cover,
+            ) */
+            Container(
+              width: 200,
+              height: 200,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/images/yame2.jpeg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alertDialog;
+        },
+      );
+      print("click");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 81, 233, 162),
         title: Text(widget.title),
       ),
       body: Center(
@@ -55,19 +107,19 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Yamete Kudasaiiiii!!!!!!',
+              'Holaaaa Presiosooo!!!',
               style: TextStyle(fontFamily: "BlwBoldItalic", fontSize: 28),
             ),
-            Image.asset("assets/images/yame.jpeg")
+            Image.asset("assets/images/yame1.jpeg")
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print("click");
+          _alert();
         },
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.beach_access),
       ),
     );
   }
