@@ -17,12 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: '-----------',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 79, 231, 142)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: '200527 - CsSuar'),
     );
   }
 }
@@ -54,12 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Yamete Kudasaiiiii!!!!!!',
+              style: TextStyle(fontFamily: "BlwBoldItalic", fontSize: 28),
             ),
-            Text(
-              '_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            Image.asset("assets/images/yame.jpeg")
           ],
         ),
       ),
