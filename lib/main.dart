@@ -4,6 +4,7 @@
 // Grado: 10° Grupo: A
 // Profesor MTI. Marco Antorio Ramirez Hernandez
 import 'package:flutter/material.dart';
+import 'package:soundpool/soundpool.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,12 +38,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  /* int _counter = 0;
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  } */
   void _alert() {
     setState(() {
       AlertDialog alertDialog = AlertDialog(
@@ -63,13 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color.fromARGB(255, 12, 109, 229),
               ),
             ),
-            /* Image.asset(
-              "assets/images/yame2.jpeg",
-              width: 200,
-              height: 200,
-              alignment: Alignment.center,
-              fit: BoxFit.cover,
-            ) */
             Container(
               width: 200,
               height: 200,
